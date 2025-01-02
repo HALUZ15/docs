@@ -7,12 +7,12 @@ redirect_from:
   - /github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-sponsors/upgrading-a-sponsorship
 versions:
   fpt: '*'
+  ghec: '*'
 type: how_to
 topics:
   - Sponsors
   - Upgrades
 ---
-{% data reusables.sponsors.org-sponsors-release-phase %} 
 
 ## About sponsorship upgrades
 

@@ -8,6 +8,7 @@ redirect_from:
   - /github/visualizing-repository-data-with-graphs/accessing-basic-repository-data/viewing-traffic-to-a-repository
 versions:
   fpt: '*'
+  ghec: '*'
 topics:
   - Repositories
 shortTitle: View repository traffic
@@ -30,4 +31,4 @@ Referring sites and popular content are ordered by views and unique visitors. Fu
 {% data reusables.repositories.navigate-to-repo %}
 {% data reusables.repositories.accessing-repository-graphs %}
 3. In the left sidebar, click **Traffic**.
-![Traffic tab](/assets/images/help/graphs/traffic_tab.png)
+![Screenshot of the "Traffic" tab. The tab is highlighted with a dark orange outline.](/assets/images/help/graphs/traffic_tab.png)

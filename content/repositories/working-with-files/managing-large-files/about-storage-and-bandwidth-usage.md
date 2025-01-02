@@ -2,13 +2,14 @@
 title: About storage and bandwidth usage
 intro: '{% data reusables.large_files.free-storage-bandwidth-amount %}'
 redirect_from:
-  - /articles/billing-plans-for-large-file-storage/
-  - /articles/billing-plans-for-git-large-file-storage/
+  - /articles/billing-plans-for-large-file-storage
+  - /articles/billing-plans-for-git-large-file-storage
   - /articles/about-storage-and-bandwidth-usage
   - /github/managing-large-files/about-storage-and-bandwidth-usage
   - /github/managing-large-files/versioning-large-files/about-storage-and-bandwidth-usage
 versions:
   fpt: '*'
+  ghec: '*'
 shortTitle: Storage & bandwidth
 ---
 {% data variables.large_files.product_name_short %} is available for every repository on {% data variables.product.product_name %}, whether or not your account or organization has a paid subscription.
@@ -22,8 +23,8 @@ For example:
 - If you download a 500 MB file that's tracked with LFS, you'll use 500 MB of the repository owner's allotted bandwidth. If a collaborator pushes a change to the file and you pull the new version to your local repository, you'll use another 500 MB of bandwidth, bringing the total usage for these two downloads to 1 GB of bandwidth.
 - If {% data variables.product.prodname_actions %} downloads a 500 MB file that is tracked with LFS, it will use 500 MB of the repository owner's allotted bandwidth.
 
-{% ifversion fpt %}
-If {% data variables.large_files.product_name_long %} ({% data variables.large_files.product_name_short %}) objects are included in source code archives for your repository, downloads of those archives will count towards bandwidth usage for the repository. For more information, see "[Managing {% data variables.large_files.product_name_short %} objects in archives of your repository](/github/administering-a-repository/managing-git-lfs-objects-in-archives-of-your-repository)."
+{% ifversion fpt or ghec %}
+If {% data variables.large_files.product_name_long %} ({% data variables.large_files.product_name_short %}) objects are included in [source code archives](/repositories/working-with-files/using-files/downloading-source-code-archives) for your repository, downloads of those archives will count towards bandwidth usage for the repository. For more information, see "[AUTOTITLE](/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-git-lfs-objects-in-archives-of-your-repository)."
 {% endif %}
 
 {% tip %}
@@ -36,7 +37,7 @@ If {% data variables.large_files.product_name_long %} ({% data variables.large_f
 
 ## Storage quota
 
-If you use more than {% data variables.large_files.initial_storage_quota %} of storage without purchasing a data pack, you can still clone repositories with large assets, but you will only retrieve the pointer files, and you will not be able to push new files back up. For more information about pointer files, see "[About {% data variables.large_files.product_name_long %}](/github/managing-large-files/about-git-large-file-storage#pointer-file-format)."
+If you use more than {% data variables.large_files.initial_storage_quota %} of storage without purchasing a data pack, you can still clone repositories with large assets, but you will only retrieve the pointer files, and you will not be able to push new files back up. For more information about pointer files, see "[AUTOTITLE](/repositories/working-with-files/managing-large-files/about-git-large-file-storage#pointer-file-format)."
 
 ## Bandwidth quota
 
@@ -44,5 +45,5 @@ If you use more than {% data variables.large_files.initial_bandwidth_quota %} of
 
 ## Further reading
 
-- "[Viewing your {% data variables.large_files.product_name_long %} usage](/articles/viewing-your-git-large-file-storage-usage)"
-- "[Managing billing for {% data variables.large_files.product_name_long %}](/articles/managing-billing-for-git-large-file-storage)"
+- "[AUTOTITLE](/billing/managing-billing-for-git-large-file-storage/viewing-your-git-large-file-storage-usage)"
+- "[AUTOTITLE](/billing/managing-billing-for-git-large-file-storage)"

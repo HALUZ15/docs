@@ -12,11 +12,18 @@
   from expanding beyond the horizontal boundaries of the parent element. */
     table-layout: auto;
 
+    /* For mobile (small viewports) we need to fix the table because if the table 
+    is larger than the viewport it will force the width of the table causing issues
+    with the header on scroll 
+    */
+    @media (max-width: 544px) {
+      table-layout: fixed;
+    }
+
     code {
       font-size: 85%;
       padding: 0.2em 0.4em;
-      background-color: var(--color-markdown-code-bg);
-      border-radius: 6px;
+      border-radius: 6px; // primer rounded-2
     }
 
     pre > code {
@@ -33,12 +40,12 @@
       text-align: left;
       position: sticky;
       vertical-align: top;
-      z-index: 1;
-      top: 0;
-      background: var(--color-bg-primary);
-      box-shadow: 0 3px 0 0 var(--color-auto-gray-4);
-      padding: 12px 8px;
-      border: 0px;
+      z-index: 0;
+      top: 64px;
+      background: var(--color-canvas-default);
+      box-shadow: 0 3px 0 0 var(--color-canvas-subtle);
+      padding: 0.75rem 0.5rem;
+      border: 0;
     }
 
     th[align="center"] {
@@ -55,9 +62,13 @@
     }
 
     td {
-      padding: 10px 8px;
-      border: 0px;
+      padding: 0.75rem 0.5rem;
+      border: 0;
       vertical-align: top;
+
+      sup {
+        z-index: -1;
+      }
     }
 
     // markdown that has been converted to HTML is often wrapped in <p> tags

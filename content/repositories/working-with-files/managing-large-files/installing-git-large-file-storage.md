@@ -2,7 +2,7 @@
 title: Installing Git Large File Storage
 intro: 'In order to use {% data variables.large_files.product_name_short %}, you''ll need to download and install a new program that''s separate from Git.'
 redirect_from:
-  - /articles/installing-large-file-storage/
+  - /articles/installing-large-file-storage
   - /articles/installing-git-large-file-storage
   - /github/managing-large-files/installing-git-large-file-storage
   - /github/managing-large-files/versioning-large-files/installing-git-large-file-storage
@@ -10,6 +10,7 @@ versions:
   fpt: '*'
   ghes: '*'
   ghae: '*'
+  ghec: '*'
 shortTitle: Install Git LFS
 ---
 {% mac %}
@@ -24,7 +25,7 @@ shortTitle: Install Git LFS
 {% data reusables.command_line.open_the_multi_os_terminal %}
 3. Change the current working directory into the folder you downloaded and unzipped.
   ```shell
-  $ cd ~/Downloads/git-lfs-<em>1.X.X</em>
+  $ cd ~/Downloads/git-lfs-1.X.X
   ```
  {% note %}
 
@@ -84,7 +85,7 @@ shortTitle: Install Git LFS
 {% data reusables.command_line.open_the_multi_os_terminal %}
 3. Change the current working directory into the folder you downloaded and unzipped.
   ```shell
-  $ cd ~/Downloads/git-lfs-<em>1.X.X</em>
+  $ cd ~/Downloads/git-lfs-1.X.X
   ```
  {% note %}
 
@@ -112,4 +113,4 @@ shortTitle: Install Git LFS
 
 ## Further reading
 
-- "[Configuring {% data variables.large_files.product_name_long %}](/articles/configuring-git-large-file-storage)"
+- "[AUTOTITLE](/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage)"

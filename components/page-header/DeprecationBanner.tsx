@@ -1,6 +1,9 @@
 import { useMainContext } from 'components/context/MainContext'
 import { useVersion } from 'components/hooks/useVersion'
-import { Callout } from 'components/ui/Callout'
+import { Flash } from '@primer/react'
+import cx from 'classnames'
+
+import styles from './DeprecationBanner.module.scss'
 
 export const DeprecationBanner = () => {
   const { data, enterpriseServerReleases } = useMainContext()
@@ -15,8 +18,11 @@ export const DeprecationBanner = () => {
     : data.reusables.enterprise_deprecation.version_will_be_deprecated
 
   return (
-    <div data-testid="deprecation-banner" className="container-xl mt-3 mx-auto p-responsive">
-      <Callout variant="warning">
+    <div
+      data-testid="deprecation-banner"
+      className={cx('container-xl mt-3 mx-auto p-responsive', styles.DeprecationBanner)}
+    >
+      <Flash variant="warning">
         <p>
           <b className="text-bold">
             <span dangerouslySetInnerHTML={{ __html: message }} />{' '}
@@ -35,7 +41,7 @@ export const DeprecationBanner = () => {
             }}
           />
         </p>
-      </Callout>
+      </Flash>
     </div>
   )
 }
